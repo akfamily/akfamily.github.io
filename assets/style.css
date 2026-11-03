@@ -104,13 +104,6 @@ img { max-width: 100%; height: auto; }
 .qr img { margin: 16px 0; }
 .qr p { color: var(--muted); font-size: 14px; }
 
-.perks {
-  max-width: 760px; margin: 32px auto 0; padding: 16px 24px;
-  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
-}
-.perks summary { cursor: pointer; font-weight: 600; }
-.perks ul { margin: 12px 0 0; padding-left: 20px; }
-.perks li { margin: 6px 0; }
 
 .footer {
   padding: 32px 0; text-align: center; font-size: 14px; color: var(--muted);
