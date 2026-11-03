@@ -1,16 +1,19 @@
-# Welcome to AKFamily's Homepage
+# akfamily.xyz
 
-## Introduction
+[AKFamily](https://github.com/akfamily) 主页 <https://akfamily.xyz> 的源码，由 GitHub Pages 直接发布 `main` 分支根目录。
 
-- [**AKShare**](https://github.com/akfamily/akshare) is an elegant and simple financial data interface library for Python, built for human beings!
-- [**AKQuant**](https://github.com/akfamily/akquant) is an elegant and simple quantitative investment tutorial documentation!
-- [**AKTools**](https://github.com/akfamily/aktools) is an elegant and simple HTTP API library for AKShare, built for AKSharers!
-- [**AKFDS**](https://akfamily.github.io/akfds) shows most powerful knowledge in **f**inancial **d**ata **s**cience!
-- [**Awesome-data**](https://github.com/akfamily/awesome-data) shows most interesting data-source around the financial world!
+纯静态页面，没有构建步骤：
 
-## Documentation
+- `index.html`：主页
+- `404.html`：404 页面
+- `assets/style.css`：样式
+- `assets/img/`：二维码和截图
+- `CNAME`：自定义域名
 
-- **AKShare** Docs: https://akshare.akfamily.xyz
-- **AKQuant** Docs: https://akquant.akfamily.xyz
-- **AKTools** Docs: https://aktools.akfamily.xyz
-- **AKFDS** Docs: https://akfds.akfamily.xyz
+本地预览：
+
+```bash
+python -m http.server 8000
+```
+
+然后打开 <http://localhost:8000>。

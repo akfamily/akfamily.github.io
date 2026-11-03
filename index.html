@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AKFamily — 专注于财经数据与量化投研的开源社区</title>
+  <meta name="description" content="AKFamily 是 AKShare、AKQuant、AKTools 和 Awesome-data 的项目家族：开源免费的财经数据接口、量化回测与实盘框架、HTTP API 与 MCP 服务，以及金融数据源合集。">
+  <meta name="keywords" content="AKFamily, AKShare, AKQuant, AKTools, Awesome-data, 财经数据, 金融数据接口, 量化投资, 量化回测, 量化实盘, Python">
+  <link rel="canonical" href="https://akfamily.xyz/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AKFamily — 专注于财经数据与量化投研的开源社区">
+  <meta property="og:description" content="开源免费的财经数据接口、量化回测与实盘框架、HTTP API 与 MCP 服务。">
+  <meta property="og:url" content="https://akfamily.xyz/">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    // 兼容旧站的 hash 路由，例如 https://akfamily.xyz/#/community
+    (function () {
+      var map = { "#/data": "#projects", "#/quant": "#projects", "#/trade": "#trade",
+                  "#/course": "#courses", "#/community": "#community", "#/": "#top" };
+      var target = map[location.hash];
+      if (!target) { return; }
+      history.replaceState(null, "", target === "#top" ? location.pathname : target);
+      document.addEventListener("DOMContentLoaded", function () {
+        var el = document.querySelector(target);
+        if (el && target !== "#top") { el.scrollIntoView(); }
+      });
+    })();
+  </script>
+</head>
+<body id="top">
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top"><span class="ak">AK</span>Family</a>
+      <nav>
+        <a href="#projects">开源项目</a>
+        <a href="#trade" class="hl">实盘交易</a>
+        <a href="#courses">视频课程</a>
+        <a href="#community">学习社区</a>
+        <a href="https://github.com/akfamily" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1><span class="ak">AK</span>Family</h1>
+        <p class="lead">专注于财经数据与量化投研的开源社区</p>
+        <p class="sub">从获取数据到回测与实盘，一套开源免费的 Python 工具链</p>
+        <ol class="flow" aria-label="项目关系">
+          <li><a href="https://akshare.akfamily.xyz/" target="_blank" rel="noopener"><b>AKShare</b><span>获取财经数据</span></a></li>
+          <li><a href="https://aktools.akfamily.xyz/" target="_blank" rel="noopener"><b>AKTools</b><span>HTTP API 与 MCP 服务</span></a></li>
+          <li><a href="https://akquant.akfamily.xyz/" target="_blank" rel="noopener"><b>AKQuant</b><span>量化回测与实盘</span></a></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="wrap">
+        <h2>开源项目</h2>
+        <div class="grid cards">
+          <article class="card">
+            <h3>AKShare</h3>
+            <p class="tag">开源财经数据接口库</p>
+            <p>基于 Python 的财经数据接口库，提供股票、期货、期权、基金、外汇、债券、指数、加密货币等金融产品的基本面数据、实时和历史行情数据，以及宏观经济等另类数据，一行代码返回 pandas DataFrame。</p>
+            <pre><code>pip install akshare</code></pre>
+            <p class="links"><a href="https://akshare.akfamily.xyz/" target="_blank" rel="noopener">文档</a><a href="https://akshare.akfamily.xyz/data/index.html" target="_blank" rel="noopener">数据字典</a><a href="https://github.com/akfamily/akshare" target="_blank" rel="noopener">GitHub</a></p>
+          </article>
+          <article class="card">
+            <h3>AKQuant</h3>
+            <p class="tag">高性能量化投研框架</p>
+            <p>核心引擎由 Rust 编写，提供 Python 策略接口，内置滚动训练、TA-Lib 兼容指标、因子表达式引擎、参数优化和风控模块，覆盖从回测到实盘的完整流程。</p>
+            <pre><code>pip install akquant</code></pre>
+            <p class="links"><a href="https://akquant.akfamily.xyz/" target="_blank" rel="noopener">文档</a><a href="https://akquant.akfamily.xyz/en/" target="_blank" rel="noopener">English</a><a href="https://github.com/akfamily/akquant" target="_blank" rel="noopener">GitHub</a></p>
+          </article>
+          <article class="card">
+            <h3>AKTools</h3>
+            <p class="tag">AKShare 的 HTTP API 与 MCP 服务</p>
+            <p>一行命令启动 HTTP 服务，让 Java、Go、R、MATLAB、Excel 等任何语言和软件都能使用 AKShare 的数据；也可以作为 MCP 服务接入 Claude、Cursor 等 AI 助手，用自然语言取数。</p>
+            <pre><code>pip install aktools</code></pre>
+            <p class="links"><a href="https://aktools.akfamily.xyz/" target="_blank" rel="noopener">文档</a><a href="https://akshare.akfamily.xyz/mcp.html" target="_blank" rel="noopener">MCP 指南</a><a href="https://github.com/akfamily/aktools" target="_blank" rel="noopener">GitHub</a></p>
+          </article>
+          <article class="card">
+            <h3>Awesome-data</h3>
+            <p class="tag">金融与经济数据源合集</p>
+            <p>收集和整理开源数据工具、金融数据 SDK，以及公开和商业数据源，为金融数据分析和量化研究提供全面的数据源参考，欢迎推荐你常用的数据源。</p>
+            <p class="links"><a href="https://github.com/akfamily/awesome-data" target="_blank" rel="noopener">GitHub</a></p>
+          </article>
+        </div>
+        <p class="more">更多项目：<a href="https://akbroker.akfamily.xyz/" target="_blank" rel="noopener">AKBroker</a>（PyBroker 量化投资中文教程）</p>
+      </div>
+    </section>
+
+    <section id="trade" class="section alt">
+      <div class="wrap">
+        <h2>实盘交易</h2>
+        <div class="grid two">
+          <article class="card promo">
+            <h3>证券与期货实盘服务</h3>
+            <p>由专业量化服务团队提供的证券与期货实盘交易服务，帮助策略从回测走向实盘，扫码即可咨询。</p>
+            <div class="trade-qr">
+              <figure>
+                <img src="assets/img/trade-stock-qrcode.png" width="160" height="160" alt="证券实盘咨询微信二维码" loading="lazy">
+                <figcaption><b>证券实盘</b>股票、可转债、ETF 期权、两融的实盘 API 对接与量化定制</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/img/trade-futures-qrcode.png" width="160" height="193" alt="期货实盘咨询微信二维码" loading="lazy">
+                <figcaption><b>期货实盘</b>量化咨询、软件指导、策略编写与托管加速</figcaption>
+              </figure>
+            </div>
+            <p class="links"><a class="btn" href="https://akshare.akfamily.xyz/trade.html" target="_blank" rel="noopener">查看实盘服务详情</a></p>
+          </article>
+          <article class="card promo">
+            <p class="ad">广告推荐</p>
+            <h3>期魔方，更懂你的量化交易终端</h3>
+            <p>期魔方是一款用于期货量化交易的本地交易终端，支持 K 线行情分析、Python 量化回测和实盘交易、开箱即用的机器学习，并内置 AKShare 插件。</p>
+            <img src="assets/img/qimofang.webp" width="1280" height="690" alt="期魔方量化交易终端界面截图" loading="lazy">
+            <p class="links"><a class="btn" href="https://qmfquant.com" target="_blank" rel="noopener sponsored">立即体验</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="section">
+      <div class="wrap">
+        <h2>视频课程</h2>
+        <ul class="grid courses">
+          <li><a href="https://app3rqjh1z21630.h5.xiaoeknow.com/p/course/column/p_63745e95e4b01126eaa6492f" target="_blank" rel="noopener">《AKShare-初阶-实战应用》</a></li>
+          <li><a href="https://app3rqjh1z21630.h5.xiaoeknow.com/p/course/column/p_6341071ae4b0eca59c3a827d" target="_blank" rel="noopener">《AKShare-初阶-使用教学（第一期）》</a></li>
+          <li><a href="https://app3rqjh1z21630.h5.xiaoeknow.com/p/course/column/p_63621554e4b083231ec7db9f" target="_blank" rel="noopener">《AKShare-源码解析》</a></li>
+          <li><a href="https://app3rqjh1z21630.h5.xiaoeknow.com/p/course/column/p_66dd2c90e4b023c0611e36cb" target="_blank" rel="noopener">《PyBroker-入门及实战》</a></li>
+          <li><a href="https://app3rqjh1z21630.h5.xiaoeknow.com/p/course/column/p_673dfc2ae4b0694c950396f7" target="_blank" rel="noopener">《PyBroker-进阶及实战》</a></li>
+          <li><a href="https://app3rqjh1z21630.h5.xiaoeknow.com/p/course/column/p_63623e37e4b0276efeaac173" target="_blank" rel="noopener">《开源项目巡礼（第一期）》</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="community" class="section alt">
+      <div class="wrap">
+        <h2>学习社区</h2>
+        <div class="grid three">
+          <article class="card qr">
+            <h3>微信公众号</h3>
+            <img src="assets/img/wechat-qrcode.jpg" width="160" height="160" alt="微信公众号【数据科学实战】二维码" loading="lazy">
+            <p>关注【数据科学实战】，获取最新的财经数据与量化投研信息</p>
+          </article>
+          <article class="card qr">
+            <h3>知识星球</h3>
+            <img src="assets/img/zsxq-qrcode.png" width="160" height="160" alt="知识星球【数据科学实战】二维码" loading="lazy">
+            <p>微信扫码加入【数据科学实战】星球，与 AKShare 核心开发者直接交流</p>
+          </article>
+          <article class="card qr">
+            <h3>商务合作</h3>
+            <img src="assets/img/business-qrcode.png" width="160" height="160" alt="商务合作微信二维码" loading="lazy">
+            <p>数据、课程、推广等合作，请微信扫码联系</p>
+          </article>
+        </div>
+        <details class="perks">
+          <summary>知识星球权益</summary>
+          <ul>
+            <li>赠送《财经数据宝典》：多年财经数据维护经验和使用技巧，解答 AKShare 使用中的注意事项，并介绍国内外常用的财经数据源</li>
+            <li>赠送《量化投研宝典》：量化投研框架的最佳实践，以及实战文章和代码资源</li>
+            <li>赠送《PyBroker-入门及实战》视频课程</li>
+            <li>优质财经数据与量化投研文章、实用策略及源代码、高质量金融数据分享</li>
+            <li>每年不少于 10 次专属直播和录播课程，支持回放、课件及源码获取，唯一官方课程答疑渠道</li>
+            <li>10 张知识店铺课程 8.8 折优惠券，以及专业微信交流群</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>友情链接：<a href="https://qmfquant.com" target="_blank" rel="noopener">期魔方</a></p>
+      <p>© 2019–<span id="year">2026</span> AKFamily · <a href="https://github.com/akfamily" target="_blank" rel="noopener">GitHub</a></p>
+      <p class="disclaimer">本站所列项目均为开源软件，仅供学术研究与学习交流，不构成任何投资建议。</p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
