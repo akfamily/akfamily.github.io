@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akfamily.xyz/sitemap.xml

@@ -21,7 +21,7 @@
     // 兼容旧站的 hash 路由，例如 https://akfamily.xyz/#/community
     (function () {
       var map = { "#/data": "#projects", "#/quant": "#projects", "#/trade": "#trade",
-                  "#/course": "#courses", "#/community": "#community", "#/": "#top" };
+                  "#/course": "#top", "#/community": "#community", "#/": "#top" };
       var target = map[location.hash];
       if (!target) { return; }
       history.replaceState(null, "", target === "#top" ? location.pathname : target);
@@ -39,7 +39,6 @@
       <nav>
         <a href="#projects">开源项目</a>
         <a href="#trade" class="hl">实盘交易</a>
-        <a href="#courses">视频课程</a>
         <a href="#community">学习社区</a>
         <a href="https://github.com/akfamily" target="_blank" rel="noopener">GitHub</a>
       </nav>
@@ -108,7 +107,7 @@
                 <figcaption><b>证券实盘</b>股票、可转债、ETF 期权、两融的实盘 API 对接与量化定制</figcaption>
               </figure>
               <figure>
-                <img src="assets/img/trade-futures-qrcode.png" width="160" height="193" alt="期货实盘咨询微信二维码" loading="lazy">
+                <img src="assets/img/trade-futures-qrcode.png" width="160" height="160" alt="期货实盘咨询微信二维码" loading="lazy">
                 <figcaption><b>期货实盘</b>量化咨询、软件指导、策略编写与托管加速</figcaption>
               </figure>
             </div>
@@ -122,20 +121,6 @@
             <p class="links"><a class="btn" href="https://qmfquant.com" target="_blank" rel="noopener sponsored">立即体验</a></p>
           </article>
         </div>
-      </div>
-    </section>
-
-    <section id="courses" class="section">
-      <div class="wrap">
-        <h2>视频课程</h2>
-        <ul class="grid courses">
-          <li><a href="https://app3rqjh1z21630.h5.xiaoeknow.com/p/course/column/p_63745e95e4b01126eaa6492f" target="_blank" rel="noopener">《AKShare-初阶-实战应用》</a></li>
-          <li><a href="https://app3rqjh1z21630.h5.xiaoeknow.com/p/course/column/p_6341071ae4b0eca59c3a827d" target="_blank" rel="noopener">《AKShare-初阶-使用教学（第一期）》</a></li>
-          <li><a href="https://app3rqjh1z21630.h5.xiaoeknow.com/p/course/column/p_63621554e4b083231ec7db9f" target="_blank" rel="noopener">《AKShare-源码解析》</a></li>
-          <li><a href="https://app3rqjh1z21630.h5.xiaoeknow.com/p/course/column/p_66dd2c90e4b023c0611e36cb" target="_blank" rel="noopener">《PyBroker-入门及实战》</a></li>
-          <li><a href="https://app3rqjh1z21630.h5.xiaoeknow.com/p/course/column/p_673dfc2ae4b0694c950396f7" target="_blank" rel="noopener">《PyBroker-进阶及实战》</a></li>
-          <li><a href="https://app3rqjh1z21630.h5.xiaoeknow.com/p/course/column/p_63623e37e4b0276efeaac173" target="_blank" rel="noopener">《开源项目巡礼（第一期）》</a></li>
-        </ul>
       </div>
     </section>
 
@@ -176,8 +161,9 @@
 
   <footer class="footer">
     <div class="wrap">
+      <p class="footer-links"><a href="https://akshare.akfamily.xyz/" target="_blank" rel="noopener">AKShare</a><a href="https://akquant.akfamily.xyz/" target="_blank" rel="noopener">AKQuant</a><a href="https://aktools.akfamily.xyz/" target="_blank" rel="noopener">AKTools</a><a href="https://akhub.akfamily.xyz/" target="_blank" rel="noopener">AKHub</a><a href="https://github.com/akfamily" target="_blank" rel="noopener">GitHub</a></p>
       <p>友情链接：<a href="https://qmfquant.com" target="_blank" rel="noopener">期魔方</a></p>
-      <p>© 2019–<span id="year">2026</span> AKFamily · <a href="https://github.com/akfamily" target="_blank" rel="noopener">GitHub</a></p>
+      <p>© 2019–<span id="year">2026</span> AKFamily</p>
       <p class="disclaimer">本站所列项目均为开源软件，仅供学术研究与学习交流，不构成任何投资建议。</p>
     </div>
   </footer>

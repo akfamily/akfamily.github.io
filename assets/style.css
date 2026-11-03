@@ -100,13 +100,6 @@ img { max-width: 100%; height: auto; }
 }
 .btn:hover { text-decoration: none; opacity: 0.9; }
 
-.courses { list-style: none; padding: 0; margin: 0; grid-template-columns: repeat(3, 1fr); }
-.courses a {
-  display: block; height: 100%; padding: 20px 24px;
-  border: 1px solid var(--line); border-radius: var(--radius); color: var(--text);
-}
-.courses a:hover { border-color: var(--brand); text-decoration: none; color: var(--brand); }
-
 .qr { align-items: center; text-align: center; }
 .qr img { margin: 16px 0; }
 .qr p { color: var(--muted); font-size: 14px; }
@@ -125,10 +118,11 @@ img { max-width: 100%; height: auto; }
 }
 .footer p { margin: 4px 0; }
 .footer a { color: var(--muted); }
+.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 20px; }
 .disclaimer { font-size: 12px; }
 
 @media (max-width: 860px) {
-  .cards, .two, .three, .courses { grid-template-columns: 1fr; }
+  .cards, .two, .three { grid-template-columns: 1fr; }
   .nav nav { gap: 14px; }
   .nav nav a:last-child { display: none; }
   .hero { padding: 56px 0 48px; }
